@@ -1,0 +1,111 @@
+10.Write a C program to demonstrate pointer usage. Use a pointer to modify the value of a variable and print the result.
+Ans:-
+ #include <stdio.h>
+       main() 
+{
+    int num = 10;        // Declare an integer variable
+    int *ptr;            // Declare a pointer to int
+
+    ptr = &num;          // Store the address of num in ptr
+
+    printf("Original value of num: %d\n", num);
+
+    *ptr = 25;           // Modify the value of num using the pointer
+
+    printf("Modified value of num using pointer: %d\n", num);
+    printf("Value pointed to by ptr: %d\n", *ptr);
+}
+Output:
+Original value of num: 10
+Modified value of num using pointer: 25
+Value pointed to by ptr: 25
+
+
+
+11.Explain string handling functions like strlen(), strcpy(), strcat(), strcmp(), and strchr(). Provide examples of when these functions are useful.
+Ans:- 1. strlen() – String Length
+Purpose:
+ Returns the number of characters in a string (excluding the null terminator \0).
+Syntax:
+size_t strlen(const char *str);
+Example:
+#include <stdio.h>
+      main()
+     {
+    char name[] = "krunal";
+    printf("Length of string: %d\n", strlen(name)); // Output: 6
+     }
+Use Case:
+Determine string size before allocating memory or looping through characters.
+________________________________________
+2. strcpy() – String Copy
+Purpose:
+Copies the contents of one string into another.
+Syntax:
+char *strcpy(char *dest, const char *src);
+Example:
+#include <stdio.h>
+int main()
+ {
+    char source[] = "Hello";
+    char destination[20];
+    strcpy(destination, source);
+    printf("Copied string: %s\n", destination); // Output: Hello
+}
+Use Case:
+Copy one string to another buffer.
+________________________________________
+3. strcat() – String Concatenation
+Purpose:
+Appends one string to the end of another.
+Syntax:
+char *strcat(char *dest, const char *src);
+Example:
+#include <stdio.h>
+      main()
+ {
+    char greeting[30] = "Hello, ";
+    char name[] = "world!";
+    strcat(greeting, name);
+    printf("Concatenated string: %s\n", greeting); // Output: Hello, world!
+}
+Use Case:
+Join two strings (e.g., building a full name from first and last name).
+________________________________________
+4. strcmp() – String Comparison
+Purpose:
+Compares two strings lexicographically.
+Syntax:
+int strcmp(const char *str1, const char *str2);
+Return Values:
+•	0 if strings are equal
+•	< 0 if str1 < str2
+•	> 0 if str1 > str2
+Example:
+#include <stdio.h>
+ main() 
+{
+    char str1[] = "apple";
+    char str2[] = "banana";
+    int result = strcmp(str1, str2);
+    printf("Comparison result: %d\n", result); // Output: -1
+}
+Use Case:
+Checking user input against a password or sorting strings.
+________________________________________
+5. strchr() – Character Search
+Purpose:
+Finds the first occurrence of a character in a string.
+Syntax:
+char *strchr(const char *str, int c);
+Example:
+#include <stdio.h>
+      main() 
+      {
+    char text[] = "education";
+    char *ptr = strchr(text, 'c');
+    if (ptr != NULL) {
+        printf("Character found at position: %ld\n", ptr - text); // Output: 3
+      }
+Use Case:
+Find specific characters (e.g., checking for special characters in input).

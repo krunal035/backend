@@ -26,7 +26,7 @@ main()
 			}
 			else
 			{
-				printf("%d is the greatest number.",n2);
+				printf("%d is the greatest number.",n4);
 			}
 		}
 		else
@@ -51,7 +51,7 @@ main()
 			}
 			else
 			{
-				printf("%d is the greatest number.",n3);
+				printf("%d is the greatest number.",n4);
 			}
 		}
 		else

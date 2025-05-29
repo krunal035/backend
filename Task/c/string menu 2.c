@@ -9,7 +9,7 @@ main()
 		printf("\npress 1 for find string length: ");
         printf("\npress 2 for string copy: ");
 		printf("\npress 3 for string comparison: ");
-		printf("\npress 4 for find string length: ");
+		printf("\npress 4 for exit. ");
 		
 		int ch;
 		fflush(stdin);
